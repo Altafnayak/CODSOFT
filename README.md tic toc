@@ -1,0 +1,55 @@
+Overview of the Tic-Tac-Toe Game (AI vs Player)
+
+This repository contains a Python-based implementation of a Tic-Tac-Toe game with an AI opponent using the Minimax algorithm. The game is built using the Tkinter library to create a simple graphical user interface (GUI). Here's an overview of the functionality:
+
+### Features:
+- **Two Players**: The game allows for two modes:
+  - Player X (human) vs Player O (AI, using Minimax algorithm)
+  - The AI is programmed to make optimal moves based on the state of the game board.
+  
+- **Minimax Algorithm**: 
+  - The AI makes decisions based on the Minimax algorithm with alpha-beta pruning to optimize its play and minimize the player's advantage.
+  - The AI evaluates all possible future board states to determine the best possible move.
+
+- **Graphical User Interface (GUI)**:
+  - The game board consists of a 3x3 grid where players click to place their markers (X or O).
+  - The game provides clear visual feedback when a player wins, the game ends in a tie, or a player makes a move.
+  - Buttons are dynamically updated based on player actions, and the game automatically handles turn-taking between the player and the AI.
+
+- **Game Status**:
+  - The current player's turn is displayed at the top of the screen, and the winner is shown once the game concludes.
+  - The board highlights the winning combination with green-colored buttons when a player wins.
+
+- **Game Reset**:
+  - The game can be restarted via a "Restart" button, which resets the board, the turns, and the game status.
+
+### Core Functions:
+1. **`initialize_board()`**: Initializes an empty 3x3 game board.
+2. **`is_game_over(board)`**: Checks the game state to determine if a player has won, if the game ended in a tie, or if the game is ongoing.
+3. **`minimax(board, depth, alpha, beta, is_maximizing)`**: Implements the Minimax algorithm with alpha-beta pruning to determine the AI's best move.
+4. **`find_best_move(board)`**: Finds the optimal move for the AI by evaluating all available moves using the Minimax algorithm.
+5. **`on_click(row, col)`**: Handles the player's move when they click on a cell in the grid.
+6. **`ai_move()`**: Handles the AI's move after the player has made a move.
+7. **`highlight_winner(combination)`**: Highlights the winning combination of cells on the board.
+8. **`update_turn_indicator()`**: Updates the UI to show whose turn it is (Player X or Player O).
+9. **`display_result()`**: Displays the result (win/tie) and disables further moves.
+10. **`reset_game()`**: Resets the game board and restarts the game.
+
+### How to Run:
+1. Clone this repository to your local machine.
+2. Ensure that you have Python installed (version 3.6 or higher).
+3. Install Tkinter (if not already installed, it's typically bundled with Python).
+4. Run the script `tic_tac_toe.py` to start the game.
+5. The game window will appear where you can interact with the board.
+
+### Dependencies:
+- Python 3.x
+- Tkinter (for GUI)
+
+### Gameplay:
+- Player X (human) goes first, followed by Player O (AI).
+- The AI will always play optimally, making it a challenging opponent for human players.
+- The game will display the result once there is a winner or a tie.
+  
+### License:
+This project is open-source and licensed under the MIT License.
