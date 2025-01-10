@@ -1,4 +1,4 @@
-#simple chatbot
+#altaf
 import tkinter as tk
 import time
 import threading
@@ -31,7 +31,7 @@ def chatbot_response(user_input):
         return "I can't check the weather right now, but you can try asking about today's forecast!"
     
     else:
-        return "Sorry, I didn't understand that. Can you please rephrase?"
+        return "Sorry, I dodn't have informataion about that. is there anything else?"
 
 # Function to simulate typing with a delay
 def simulate_typing(response):
@@ -72,7 +72,7 @@ root.config(bg="#f0f0f0")
 chat_window = tk.Text(root, state=tk.DISABLED, height=20, width=50, wrap=tk.WORD, font=("Helvetica", 12))
 chat_window.pack(pady=10)
 
-# Add tags for decoration
+#  decoration
 chat_window.tag_configure('user_input', foreground='blue', font=("Helvetica", 12, "bold"))
 chat_window.tag_configure('chatbot_response', foreground='green', font=("Helvetica", 12))
 chat_window.tag_configure('chatbot_typing', foreground='green', font=("Helvetica", 12, "italic"))
@@ -85,5 +85,4 @@ entry.pack(pady=10)
 send_button = tk.Button(root, text="Send", width=20, command=send_message, font=("Helvetica", 12, "bold"), bg="#4CAF50", fg="white")
 send_button.pack(pady=5)
 
-# Run the Tkinter event loop
 root.mainloop() 
