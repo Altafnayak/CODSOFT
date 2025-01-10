@@ -55,7 +55,7 @@ vocab_size = len(tokenizer.word_index) + 1
 max_length = max(len(caption.split()) for caption in captions)
 
 # Example image path
-image_path = r"C:\Users\altaf\projects\New folder\WhatsApp Image 2023-12-25 at 13.20.42_977501e3.jpg"
+image_path = r("image path")
 
 # Example encoded image
 image_features = encode_image(image_path)
