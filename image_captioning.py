@@ -1,3 +1,4 @@
+#Altaf
 import numpy as np
 import tensorflow as tf # type: ignore
 from tensorflow.keras.layers import Input, Dense, Embedding, LSTM, Dropout, Add # type: ignore
